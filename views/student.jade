@@ -2,10 +2,8 @@ extends layout
 
 block content
   if user
-    div
-      h1= theStudent.studentName
+    div(class="student-view")
+      h1(class="text-white")= theStudent.studentName
       p= theStudent.studentPhone
-      form(action="/#{theStudent._id}/delete" method="post")
-        input(type="submit" value="DELETE!")
   else
     h2 please create an account to access this page
