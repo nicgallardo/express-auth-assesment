@@ -5,7 +5,8 @@ block content
     div
       h2 All Students
       for students in allStudents
-        td= students.studentName 
-        td= students.studentPhone   
-        td
-          a(href="/#{students._id}") view student  
+        div(class="student-view")
+            ul= students.studentName 
+            ul= students.studentPhone   
+            ul
+              a(href="/#{students._id}") view student  
