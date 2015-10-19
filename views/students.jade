@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  if user 
+    div
+      h2 All Students
+      for students in allStudents
+        td= students.studentName 
+        td= students.studentPhone   
+        td
+          a(href="/#{students._id}") view student  

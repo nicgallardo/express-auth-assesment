@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  if user
+  else
+    if errors
+      div(class="errors")
+        for error in errors
+          li= error
+    div
+      form(method="post" action="/signup")
+        h2 signup for acct
+        label email
+          input(type="text" name="email")
+        p
+          label password
+            input(type="text" name="password")
+        button(type="submit") signup
+      form(method="post" action="/signin")
+        h2 Signin!
+        label email
+          input(type="text" name="email")
+        p
+          label password
+            input(type="text" name="password")
+        button(type="submit") Signin
+        
+    

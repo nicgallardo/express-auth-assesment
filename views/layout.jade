@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    if user
+        h3 WELCOME #{user}
+        div
+          a(href="/signout") signout
+        div
+          a(href="/add-student") add a student
+        div
+          a(href="/students") view all students
+              
+    block content
